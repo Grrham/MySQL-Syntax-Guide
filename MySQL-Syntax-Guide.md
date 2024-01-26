@@ -86,6 +86,7 @@ DROP TABLE employee_info;
 ```
 
 ### How to Insert ROWS & RECORDS (single and multiple)
+This is how you add information to a table.
 
 ```bash
 -- Insert a single row into the 'employees' table
@@ -100,6 +101,7 @@ INSERT INTO employees (employee_id, employee_name, department_id) VALUES
 ```
 
 ### How to SELECT with the WHERE Clause
+The `SELECT` statement is used to retrieve data from a table. The `WHERE` clause is used to filter the results based on a specified condition.
 
 ```bash
 SELECT * FROM table_name WHERE condition;
@@ -110,6 +112,7 @@ SELECT * FROM employees WHERE department_id = 1;
 ```
 
 ### How to SELECT with the WHERE Clause using a range
+You can use the `BETWEEN` keyword to select rows within a specified range. 
 
 ```bash
 SELECT * FROM table_name WHERE column BETWEEN value1 AND value2;
@@ -159,6 +162,7 @@ UPDATE employees SET position = 'Manager' WHERE employee_id = 105
 ```
 
 ### How to Order by and use Distinct
+The `ORDER` BY clause is used to sort the result set in ascending or descending order based on one or more columns. The `DISTINCT` keyword is used to eliminate duplicate rows from the result set.
 
 ```bash
 Order by
@@ -177,6 +181,7 @@ SELECT DISTINCT department_id FROM employees;
 ```
 
 ### How to Concatenate Columns
+`CONCATENATE` is the process of combining two or more strings into a single string. It's often used to join the values of different columns or add a separator between them. It's a common operation when you want to display or manipulate data in a specific format.
 
 ```bash
 SELECT CONCAT(column1, ' ', column2) AS concatenated_column FROM table_name;
@@ -187,6 +192,7 @@ SELECT CONCAT(employee_name, ' - ', position) AS employee_position FROM employee
 ```
 
 ### How to Select Distinct Rows
+`DISTINCT` is used to ensure that the result set only contains unique combinations of values in the specified columns, useful for obtaining a distinct set of data.
 
 ```bash
 SELECT DISTINCT * FROM table_name WHERE condition;
@@ -197,6 +203,7 @@ SELECT DISTINCT department_id, salary FROM employees;
 ```
 
 ### How to use LIKE to Search
+The `LIKE` operator is a comparison operator in MySQL that is used to match a specified pattern against values in a column.
 
 ```bash
 SELECT * FROM table_name WHERE column_name LIKE 'pattern';
@@ -206,6 +213,7 @@ SELECT * FROM employees WHERE employee_name LIKE 'S%';
 ```
 
 ### How Select using IN
+The `IN` operator is a comparison operator in MySQL used to check if a value matches any value in a specified list.
 
 ```bash
 SELECT * FROM table_name WHERE column_name IN (value1, value2, ...);
@@ -216,6 +224,7 @@ SELECT * FROM employees WHERE department_id IN (1, 3);
 ```
 
 ### How to Create & Remove Index
+Creating an index in a database involves generating a data structure that enhances the speed of data retrieval operations on a specific column or set of columns in a table.
 
 ```bash
 Create index
